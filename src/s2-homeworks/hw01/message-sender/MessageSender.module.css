@@ -1,18 +1,36 @@
 .sendForm {
-
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .textarea {
 
+    background: white; /* Цвет фона */
+    border: 2px solid lightgray; /* Параметры рамки */
+    border-radius: 30px;
+    padding: 10px; /* Поля */
+    width: 90%; /* Ширина */
+    height: 200px; /* Высота */
+    box-sizing: border-box; /* Алгоритм расчёта ширины */
+    font-size: 14px; /* Размер шрифта */
+    overflow: hidden;
+
 }
 
 .button {
-
+    margin-left: 40px;
+    background-color: #0059b3;
+    border: 2px solid lightgray; /* Параметры рамки */
+    border-radius: 30px;
+    padding: 10px; /* Поля */
+    width: 7%; /* Ширина */
+    height: 40px;
 }
 
 .button:hover {
 
 }
+
 .button:active {
 
 }
