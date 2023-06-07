@@ -12,7 +12,7 @@ const MessageSender = (props: any) => {
     const onChange = (e: any) => {
         setText(e.currentTarget.value)
     }
-
+//
     useEffect(() => {
         if (textareaRef?.current) {
             textareaRef.current.style.height = '0px'

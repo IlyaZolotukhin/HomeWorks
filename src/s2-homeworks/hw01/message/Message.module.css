@@ -1,17 +1,30 @@
 .message {
-
+    width: 40%;
+    /*margin-right: 100px;*/
+    margin-bottom: 50px;
+    margin-left: auto;
 }
 
 .imageAndText {
-
+   /* display: flex;
+    align-items: end;*/
+    gap: 20px;
+    padding: 10px;
+    text-align: right;
 }
 
 .imageAndText img {
-
+    float: right;
+    width: 50px;
 }
 
 .text {
-
+    position: relative;
+    margin-right: 60px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #0059b3;
 }
 
 .text:after {
@@ -19,13 +32,21 @@
 }
 
 .name {
-
+    padding-bottom: 10px;
+    color: #DDEEFF;
+    font-size: 1.5em;
 }
 
 .messageText {
-
+    word-wrap: break-word;/*переносит слово на новую строку*/
+    white-space: break-spaces;/*переносит слово после пробела*/
+    font-size: 1.5em;
+    text-align: left;
+    color: #DDEEFF;
 }
 
 .time {
-
+    margin-right: 5px;
+    padding-right: 15px;
+    text-align: right;
 }
