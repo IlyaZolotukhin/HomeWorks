@@ -1,11 +1,14 @@
 .friendMessage {
     width: 40%;
-    margin-left: 100px;
+    /*margin-left: 100px;
     margin-bottom: 50px;
-    margin-right: auto;
+    margin-right: auto;*/
 }
 
 .friendImageAndText {
+    display: flex;
+    align-items: end;
+    gap: 20px;
     padding: 10px;
     text-align: left;
 }
@@ -17,7 +20,6 @@
 
 .friendText {
     position: relative;
-    margin-left: 60px;
     padding: 5px;
     border-style: solid;
     border-color: lightgray;
@@ -36,6 +38,8 @@
 }
 
 .friendMessageText {
+    word-wrap: break-word;
+    white-space: break-spaces;
     font-size: 1.5em;
     text-align: left;
     color: black;
