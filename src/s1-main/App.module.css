@@ -9,7 +9,7 @@
     grid-template-areas:
             "mf m"
             "ms";
-
+    margin-bottom: 200px;
 }
 
 .hwTitle {
