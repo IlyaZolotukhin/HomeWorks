@@ -11,22 +11,13 @@ type GreetingPropsType = {
     totalUsers: number // need to fix any
     lastUserName?: string // need to fix any
 }
-
 // презентационная компонента (для верстальщика)
 const Greeting: React.FC<GreetingPropsType> = (
     {
-        name,
-        setNameCallback,
-        addUser,
-        onEnter,
-        onBlur,
-        error,
-        totalUsers,
-        lastUserName,
-    } // деструктуризация пропсов
+        name,setNameCallback,addUser,onEnter,onBlur,error,
+        totalUsers,lastUserName,} // деструктуризация пропсов
 ) => {
     const inputClass = `${s.input} ${error ? s.errorInput : ''}` // need to fix with (?:)
-
     return (
         <div id={'hw3-form'} className={s.greetingForm}>
             <div className={s.text}>
@@ -44,23 +35,17 @@ const Greeting: React.FC<GreetingPropsType> = (
                         onChange={setNameCallback}
                         className={inputClass}
                         onKeyDown={onEnter}
-                        onBlur={onBlur}
-                    />
+                        onBlur={onBlur} />
                     <div id={'hw3-error'} className={s.error}>
                         {error}
                     </div>
                 </div>
-
                 <button
                     id={'hw3-button'}
                     onClick={addUser}
                     className={s.button}
-                    disabled={!name.trim()}
-                >
-                    add
-                </button>
+                    disabled={!name.trim()}>add</button>
             </div>
-
             {lastUserName && (
                 <div className={s.greeting}>
                     Привет <span id={'hw3-last-user'}>{lastUserName}</span>!

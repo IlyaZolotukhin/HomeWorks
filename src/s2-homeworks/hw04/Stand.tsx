@@ -29,13 +29,11 @@ const Stand = () => {
                         onChangeText={setValue}
                         error={error}
                         onEnter={() => {
-                            setError(
-                                stateForAllInputs.trim()
-                                    ? ''
-                                    : 'Error'
-                            )
+                            setError(stateForAllInputs.trim() ? '' : 'Error' )
                             setValue('')
                         }}
+                        //обнуляем текст ввода если он не пустой и сбрасываем error
+                        //если же текст пустой то сообщение error
                     />
                 </div>
             </div>

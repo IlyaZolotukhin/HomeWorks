@@ -6,40 +6,29 @@ type GreetingContainerPropsType = {
     users:  UserType[] // need to fix any
     addUserCallback: (name: string) => void// need to fix any
 }
-
 export const pureAddUser = (name: string,
                             setError: (error: string) => void,
                             setName: (name: string) => void,
                             addUserCallback: (name: string) => void) => {
-    if(!name.trim()) {
+    if(!name.trim()) { // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
         setError('Name is required');
     }else {
         addUserCallback(name);
         setName("");
         setError("");
     }
-    // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
 };
-
-export const pureOnBlur = (name: string,
-                           setError: (error: string) => void) => {
-    // если имя пустое - показать ошибку
-    if(!name.trim()) {
+export const pureOnBlur = (name: string,setError: (error: string) => void) => {
+    if(!name.trim()) {// если имя пустое - показать ошибку
         setError('Name is required');
     }
 };
-
 export const pureOnEnter = (e:KeyboardEvent<HTMLInputElement>,
                             addUser: () => void) => { // если нажата кнопка Enter - добавить
     if(e.key === 'Enter'){
         addUser();
     }
 }
-
-// более простой и понятный для новичков
-// function GreetingContainer(props: GreetingPropsType) {
-
-// более современный и удобный для про :)
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     users,
     addUserCallback,
@@ -53,22 +42,17 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
 
         error && setError('');
     }
-
     const addUser = () => {
         pureAddUser(name, setError, setName, addUserCallback)
     }
-
     const onBlur = () => {
         pureOnBlur(name, setError)
     }
-
     const onEnter = (e:KeyboardEvent<HTMLInputElement>) => {
         pureOnEnter(e, addUser)
     }
-
     const totalUsers = users.length;// need to fix
     const lastUserName = users.length ? users[users.length-1].name : undefined; // need to fix
-
     return (
         <Greeting
             name={name}
