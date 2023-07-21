@@ -5,7 +5,6 @@ import { Sidebar } from '../sidebar/Sidebar'
 type PropsType = {
     children: ReactNode
 }
-
 export const Layout: FC<PropsType> = ({ children }) => {
     const [open, setOpen] = useState(false)
     const handleClose = () => setOpen(false)
@@ -14,16 +13,13 @@ export const Layout: FC<PropsType> = ({ children }) => {
     useEffect(() => {
         open && (document.body.style.overflow = 'hidden')
         !open && (document.body.style.overflow = 'unset')
-
     }, [open]) // отключает прокрутку при открытом меню
 
-    return (
-        <>
+    return (<>
             <Sidebar open={open} handleClose={handleClose} />
             <Header handleOpen={handleOpen} />
             <div>
-                {/*страницы*/}
-                {children}
+                {/*страницы*/}{children}
             </div>
         </>
     )
