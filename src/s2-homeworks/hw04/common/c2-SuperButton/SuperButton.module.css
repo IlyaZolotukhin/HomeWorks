@@ -42,15 +42,17 @@
 }
 
 .default:hover {
-    border: 3px solid darkslateblue;
+    background-color: darkslateblue;
 }
 
 .red:hover {
-    border: 3px solid darkslateblue;
+    background-color: darkred;
 }
 
 .secondary:hover {
-    border: 3px solid darkslateblue;
+    background-color: aquamarine;
+    color: darkslateblue;
+    border: 1px solid darkslateblue;
 }
 
 .default:active {
