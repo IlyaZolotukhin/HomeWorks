@@ -1,4 +1,7 @@
 .select {
+    margin-top: 10px;
+    border: darkgrey 1px solid;
+    width: 120px;
 }
 
 .select:focus {

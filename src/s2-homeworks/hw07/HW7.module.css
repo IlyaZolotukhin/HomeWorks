@@ -1,2 +1,5 @@
 .container {
+    display: flex;
+    justify-content: start;
+    margin-left: 15px;
 }
