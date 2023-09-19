@@ -1,23 +1,48 @@
 .item {
+    border-bottom: solid 1px darkgrey;
 }
 
 .item:last-of-type {
+
 }
 
 .users {
+    margin-left: 10px;
+
 }
 
 .buttonsContainer {
 }
 
 .container {
+
 }
 
 .thead {
+    background-color: darkgrey;
 }
 
 .nameCol {
+    width: 200px;
+    text-align: left;
+    padding: 5px;
+    border-bottom: solid 1px darkgrey;
+}
+
+.nameColum {
+    font-weight: bold;
+    text-align: left;
+    padding: 5px;
+
 }
 
 .ageCol {
+
+    font-weight: bold;
+}
+
+.ageColum {
+    width: 200px;
+    font-weight: bold;
+    border-bottom: solid 1px darkgrey;
 }
