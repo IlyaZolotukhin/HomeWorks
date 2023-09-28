@@ -69,6 +69,7 @@
 }
 
 .button.disabled {
+    cursor: default;
     font-size: medium;
     color: darkgrey;
     opacity: 0.65;
