@@ -1,7 +1,14 @@
-.tech {
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
 
+.hw {
+    margin: 30px 50px;
 }
 
 .loading {
-
+    margin-left: 300px;
+    color: darkgrey;
 }

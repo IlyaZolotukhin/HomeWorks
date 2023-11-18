@@ -39,6 +39,7 @@ const HW13 = () => {
                 setInfo(res.data.info)
             })
             .catch((e) => {
+                debugger
                 if (e.response.status === 400) {
                     setCode('Ошибка 400!')
                     setImage(error400)

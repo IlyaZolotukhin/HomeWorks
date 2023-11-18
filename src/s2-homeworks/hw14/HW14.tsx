@@ -16,7 +16,7 @@ import {useSearchParams} from 'react-router-dom'
 const getTechs = (find: string) => {
     return axios
         .get<{ techs: string[] }>(
-            'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test2',
+            'https://samurai.it-incubator.io/api/3.0/homework/test2',
             {params: {find}}
         )
         .catch((e) => {
@@ -31,31 +31,36 @@ const HW14 = () => {
     const [techs, setTechs] = useState<string[]>([])
 
     const sendQuery = (value: string) => {
+
         setLoading(true)
         getTechs(value)
             .then((res) => {
+                const techs = res?.data.techs || [];
+                setTechs(techs);
+
                 // делает студент
-
                 // сохранить пришедшие данные
-
-                //
-            })
+            }).finally(() => {
+            setLoading(false)
+        })
     }
 
     const onChangeText = (value: string) => {
         setFind(value)
-        // делает студент
+        setSearchParams({find: value});
 
+
+        // делает студент
         // добавить/заменить значение в квери урла
         // setSearchParams(
-
-        //
     }
 
     useEffect(() => {
+
         const params = Object.fromEntries(searchParams)
         sendQuery(params.find || '')
         setFind(params.find || '')
+
     }, [])
 
     const mappedTechs = techs.map(t => (
@@ -65,10 +70,10 @@ const HW14 = () => {
     ))
 
     return (
-        <div id={'hw14'}>
+        <div id={'hw14'} className={s.wrapper}>
             <div className={s2.hwTitle}>Homework #14</div>
 
-            <div className={s2.hw}>
+            <div className={s.hw}>
                 <SuperDebouncedInput
                     id={'hw14-super-debounced-input'}
                     value={find}
