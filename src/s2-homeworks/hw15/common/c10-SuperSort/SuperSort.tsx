@@ -1,9 +1,12 @@
 import React from 'react'
+import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 // добавить в проект иконки и импортировать
-const downIcon = '[\\/]'
-const upIcon = '[/\\]'
-const noneIcon = '[--]'
+const downIcon = <KeyboardArrowDownIcon fontSize="small"/>
+const upIcon = <KeyboardArrowUpIcon fontSize="small"/>
+const noneIcon = <UnfoldMoreIcon fontSize="small"/>
 
 export type SuperSortPropsType = {
     id?: string
@@ -13,8 +16,13 @@ export type SuperSortPropsType = {
 }
 
 export const pureChange = (sort: string, down: string, up: string) => {
-    // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
-    return up // исправить
+    if (sort === down) {
+        return up
+    } else if (sort === up) {
+        return ''
+    } else {
+        return down
+    }
 }
 
 const SuperSort: React.FC<SuperSortPropsType> = (

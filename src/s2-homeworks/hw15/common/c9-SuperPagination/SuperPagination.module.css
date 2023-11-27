@@ -1,11 +1,18 @@
 .pagination {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pagination select {
+    margin: 5px;
+    width: 40px;
 }
 
 .text1 {
-
+    margin: 5px;
 }
 
 .text2 {
-
+    margin: 5px;
 }
